@@ -1,5 +1,7 @@
 <h1>Enter some text to be counted: </h1>
-<form method="" action="counter">
-    <textarea name="text" rows="15" cols="50"></textarea><br>
-    <input type="submit" value="Submit">
+
+<form method="POST" action="counter">
+    {% csrf_token %}
+    <textarea name="text" rows="25" cols="100"></textarea><br>
+    <input type="submit"/>
 </form>
