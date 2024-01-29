@@ -19,7 +19,9 @@ def index(request):
     feature3.name = 'Affordable'
     feature3.description = 'Our services is very affordable'
 
-    return  render(request, 'index.html', {'feature': feature1, 'feature2': feature2, 'feature3': feature3})
+    features = [feature1, feature2, feature3]
+
+    return  render(request, 'index.html', {'features': features})
 
 def counter(request):
     text = request.POST['text']
